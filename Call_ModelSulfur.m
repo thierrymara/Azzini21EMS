@@ -3,7 +3,7 @@
 %References
 %Tatang, M.A., Pan, W.W., Prin, R.G., McRae, G.J., 1997. 
 %An efficient method for parametric uncertainty analysis of numerical geophisical model.
-%J. Geophysics Research 102, 21925–21932.
+%J. Geophysics Research 102, 21925â€“21932.
 % Azzini, I., Mara, T.A., Rosati, R., 2021.
 %Comparison of two sets of Monte Carlo estimatiors of Sobol' indices
 %Environ. Modell. and Softw. 144, 105167
@@ -60,4 +60,5 @@ Input = [Dataset_A(:,1:Nvar);Dataset_B(:,1:Nvar)];%This is how the dataset must 
 Output = [Dataset_A(:,Nvar+1);Dataset_B(:,Nvar+1)];
 SobolIndices = MC_IA(Input,Output,Nsample);
 %First- and Total-order Sobol' indices (point estimate)
+format short g
 [SobolIndices.Si',SobolIndices.STi']
